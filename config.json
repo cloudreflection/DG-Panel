@@ -1,0 +1,16 @@
+{
+    "ip": "192.168.xx.xx",
+    "maxstrenth":{
+        "a": 114,
+        "b": 514
+    },
+    "minstrenth":{
+        "a": 1919,
+        "b": 810
+    },
+    "note":{
+        "a": "xxx",
+        "b": "yyy"
+    },
+    "cert": "wss.pem"
+}
