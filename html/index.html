@@ -3,7 +3,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
     <title>DG-Panel</title>
-    <link rel="stylesheet" href="mdui/css/mdui.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+    integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+    crossorigin="anonymous"/>
 </head>
 <body class="mdui-appbar-with-toolbar mdui-color-grey-100 mdui-appbar-with-tab" >
     <div class="mdui-appbar mdui-appbar-fixed mdui-color-indigo">
@@ -32,7 +36,7 @@
         <div class="mdui-card-content">
             <div class="mdui-textfield">
                 <label class="mdui-textfield-label">后端服务器地址</label>
-                <input id='server' class="mdui-textfield-input" type="text" placeholder="wss://dgconnect.cloudreflection.eu.org:8443"/>
+                <input id='server' class="mdui-textfield-input" type="text" placeholder="wss://connect.cloudreflection.eu.org:8443"/>
             </div>
             <div class="mdui-typo-subheading" style="display: inline-block;">您与服务器的连接: </div>
             <div class="mdui-typo-subheading" style="display: inline-block;color: gray;" id="userconn">连接中</div>
@@ -89,7 +93,10 @@
             </div>
         </div>
     </div>
-    <script src="mdui/js/mdui.min.js"></script>
+    <script
+  src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+  integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+  crossorigin="anonymous"></script>
     <script>
         document.getElementById('server').value='wss://dgconnect.cloudreflection.eu.org:8443';
         var ws,maxa,maxb,mina,minb,strentha,strenthb,serverconn;
@@ -100,7 +107,7 @@
             document.getElementById('addb').disabled=document.getElementById('rmb').disabled=document.getElementById('randb').disabled=dis;
         }
         function connectws(){
-            if(document.getElementById('server').value==''){document.getElementById('server').value='wss://dgconnect.cloudreflection.eu.org:8443';}
+            if(document.getElementById('server').value==''){document.getElementById('server').value='wss://connect.cloudreflection.eu.org:8443';}
             try{if (ws.readyState == ws.OPEN){ws.close();}}catch(error){}
             document.getElementById('userconn').innerText = ('连接中');
             document.getElementById('userconn').style.color = 'gray';
@@ -241,7 +248,7 @@
                     }
                 }
                 ws.send(JSON.stringify({'type':'addstrenth','data':{'side':side,'strenth': stre}}));
-        }
+        }}
 
         function demo(){
             mdui.snackbar({
@@ -253,3 +260,4 @@
         connectws();
     </script>
 </body>
+</html>
