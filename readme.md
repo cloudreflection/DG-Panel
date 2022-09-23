@@ -15,3 +15,6 @@
 后端由于懒(菜)使用 [DG-Lab Unlocker](https://github.com/SakuraKoi/DgLabUnlocker) 的[Websocket RPC服务](https://github.com/SakuraKoi/DgLabUnlocker/wiki/Websocket-RPC-Spec)与郊狼app连接
 
 需要```websockets```模块，可通过pip安装
+
+### DG-Panel To Do
+增加对萌多小程序的控制
